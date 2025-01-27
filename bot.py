@@ -43,6 +43,3 @@ def main():
     application.add_handler(CommandHandler("start", start))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, check_imei))
     application.run_polling()
-
-    # updater.start_polling()
-    # updater.idle()
