@@ -39,7 +39,6 @@ async def check_imei(update: Update, context: CallbackContext):
 
 def main():
     application = Application.builder().token(BOT_TOKEN).build()
-    # dp = updater.dispatcher
     application.add_handler(CommandHandler("start", start))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, check_imei))
     application.run_polling()
